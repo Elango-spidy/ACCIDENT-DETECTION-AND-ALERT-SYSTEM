@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Accident detected.</title>
+    <style>
+      body {
+        background: linear-gradient(90deg, #020c16 0%, #05dee9bb 100%);
+      }
+      h1 {
+        text-align: center;
+        margin-top: 1px;
+        font-size: 38px;
+        color: #e8e7ee;
+        text-shadow: 2px 2px 2px #0b0b0a;
+      }
+      h2 {
+        text-align: center;
+        margin-top: 1px;
+        font-size: 35px;
+        color: #060604;
+        text-shadow: 2px 2px 2px #171616;
+        animation:blinking 1.5s infinite;
+      }
+      img {
+        display: block;
+        margin: auto;
+        margin-top: 1px;
+        border: 5px solid #090004;
+        box-shadow: 2px 2px 2px #999;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        text-align: center;
+      }
+      p {
+        margin-top: 20px;
+        font-size: 24px;
+        color: #333;
+        line-height: 1.5;
+      }
+      .btn {
+        margin-top: 10px;
+        font-size: 24px;
+        background-color: #f6f6f6;
+        color: #6f0101;
+        border-radius: 5px;
+        padding: 15px 30px;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: #000207;
+      }
+
+      @keyframes blinking {
+        0% {
+          color: red;
+        }
+        47% {
+          color: #000;
+        }
+        62% {
+          color: transparent;
+        }
+        97% {
+          color: transparent;
+        }
+        100% {
+          color: #000;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Accident was detected.</h1>
+      <h2>Alert was sent to Telegram</h2>
+      <img src="{{ res_image }}" width="800" height="600" />
+      <button class="btn" onclick="window.location.href='/'">
+        Detect Another Video
+      </button>
+    </div>
+  </body>
+</html>

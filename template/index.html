@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <style>
+      body {
+        background: linear-gradient(90deg, #01274c 0%, #0e0005 100%);
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 190px auto;
+        text-align: center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 10px;
+      }
+
+      h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+
+      .form-group {
+        margin-bottom: 30px;
+      }
+
+      .form-control-file {
+        display: block;
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        font-size: 16px;
+        line-height: 1.5;
+        background-color: #fff;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      }
+
+      .form-control-file:focus {
+        border-color: #80bdff;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(255, 77, 0, 0.25);
+      }
+
+      .btn-primary {
+        background-color: #133464;
+        border-color: #f1f3f5;
+        font-size: 16px;
+        color: #f1f1f1;
+        font-weight: bold;
+        padding: 10px 30px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .btn-primary:hover {
+        background-color: #0069d9;
+        border-color: #0062cc;
+      }
+    </style>
+
+    <title>Road accident detection</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Road accident detection</h1>
+      <p>Please select a video file to detect accidents.</p>
+      <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <input type="file" class="form-control-file" name="file">
+        </div>
+        <button type="submit" class="btn btn-primary">DETECT</button>
+      </form>
+    </div>
+
+  </body>
+</html>
